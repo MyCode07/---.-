@@ -1,40 +1,27 @@
 import Swiper from 'swiper';
-import {Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
 if (sliders.length) {
     sliders.forEach(slider => {
         const section = slider.closest('section');
-        let prev = section.querySelector('.prev')
-        let next = section.querySelector('.next')
-        let pagination = section.querySelector('.pagination')
 
-        if (slider.closest('.product-slider')) {
-            new Swiper(slider, {
-                modules: [Autoplay, Pagination],
-                slidesPerView: 1,
-                pagination: {
-                    el: pagination,
-                    clickable: true,
+        new Swiper(slider, {
+            modules: [Autoplay],
+            slidesPerView: 'auto',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                pauseOnMouseEnter: true
+            },
+            breakpoints: {
+                300: {
+                    spaceBetween: 10
                 },
-                autoplay: {
-                    delay: 4000,
-                },
-            })
-        }
-
-        if (slider.closest('.page-about')) {
-            new Swiper(slider, {
-                modules: [Pagination],
-                slidesPerView: 1,
-                spaceBetween: 10,
-                pagination: {
-                    el: pagination,
-                    clickable: true,
-                },
-            })
-        }
+                769: {
+                    spaceBetween: 20
+                }
+            }
+        })
     })
 }
-
-

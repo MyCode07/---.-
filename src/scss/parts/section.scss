@@ -131,7 +131,22 @@
     }
 
     .grid-5 {
+        grid-template-columns: repeat(5, 1fr);
+
+        @media (max-width: 768px) {
+            display: flex;
+            overflow-x: auto;
+            width: 100vw;
+            padding: 0 15px;
+            margin-left: -15px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         div {
+            flex: 0 0 auto;
             aspect-ratio: 1/1;
 
             display: flex;
@@ -147,6 +162,11 @@
 
             position: relative;
 
+            @media (max-width: 768px) {
+                width: 160px;
+                height: 160px;
+            }
+
             &:before {
                 position: absolute;
                 content: "";
@@ -154,6 +174,23 @@
                 border: 3px solid $white;
                 border-radius: 9px;
             }
+        }
+    }
+
+    .swiper {
+        @include adaptive-value("margin-top", 50, 30, 1);
+        overflow: visible;
+
+        // .swiper-wrapper
+
+        &-wrapper {
+        }
+
+        // .swiper-slide
+
+        &-slide {
+            width: calc(50% - 10px);
+            min-width: 300px;
         }
     }
 }
@@ -185,46 +222,150 @@
     }
 }
 
-.section {
-    // .section__bgi
-
-    &__bgi {
-    }
-
-    // .section__container
-
-    &__container {
-    }
-
-    // .section__body
-
-    &__body {
-    }
-}
 .cta {
+    @include adaptive-value("padding-top", 250, 120, 1);
+    @include adaptive-value("padding-bottom", 250, 120, 1);
+
+    // .cta-flex
+
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        max-width: 1096px;
+        margin-inline: auto;
+        padding: 40px;
+        border-radius: 8px;
+        background-color: $white;
+
+        @media (max-width: 768px) {
+            display: block;
+            padding: 35px 15px 15px 15px;
+        }
+    }
+
     // .cta-left
 
     &-left {
+        max-width: 500px;
+        min-height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            text-transform: uppercase;
+
+            margin-bottom: 40px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        span {
+            display: block;
+
+            @media (min-width: 769px) {
+                @include adaptive-value("margin-bottom", 150, 30, 1);
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        p {
+            color: rgba($color: $black, $alpha: 0.5);
+            font-size: 16px;
+            line-height: 1.4;
+
+            margin-bottom: 30px;
+            max-width: 350px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        ._btn {
+            max-width: 350px;
+        }
+
+        ._socials {
+            margin-bottom: 50px;
+
+            @media (min-width: 769px) {
+                display: none;
+            }
+        }
     }
 
     // .cta-right
 
     &-right {
+        flex: 0 0 auto;
+        min-height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    ._btn {
+    }
+    .logo {
     }
 }
-._container {
-}
-._btn {
-    // ._btn-blue
 
-    &-blue {
+.contructor {
+    .grid {
     }
-}
-.logo {
-}
-._socials {
-    // ._socials-light
 
-    &-light {
+    // .contructor-left
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        ._link-arrow {
+            max-width: 350px;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    // .contructor-frame
+
+    &-frame {
+        img {
+            @media (min-width: 769px) {
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        ._link-arrow {
+            margin-top: 30px;
+
+            @media (min-width: 769px) {
+                display: none;
+            }
+        }
     }
 }
