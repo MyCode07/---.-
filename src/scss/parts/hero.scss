@@ -1,0 +1,101 @@
+.hero {
+    background-color: $blue-dark;
+    position: relative;
+
+    @include adaptive-value("padding-top", 230, 145, 1);
+
+    @media (min-width: 1025px) {
+        @include adaptive-value("padding-bottom", 165, 80, 1);
+    }
+
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__body
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+
+    h1 {
+    }
+
+    ._btn {
+        @media (min-width: 1025px) {
+            max-width: 350px;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 1024px) {
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    // .hero__contnet
+
+    &__contnet {
+        max-width: 900px;
+        flex: 0 0 auto;
+
+        @media (max-width: $containerWithPadding+px) {
+            max-width: 50%;
+        }
+
+        @media (max-width: 1024px) {
+            max-width: none;
+        }
+    }
+
+    // .hero__image
+
+    &__image {
+        @media (min-width: 1025px) {
+            pointer-events: none;
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            height: 400px;
+        }
+
+        &:before {
+            position: absolute;
+            inset: 0;
+            content: "";
+            background: linear-gradient(180deg, rgba($color: $blue-dark, $alpha: 0) 72%, $blue-dark 100%);
+        }
+
+        img {
+            flex: 0 0 auto;
+            width: auto;
+            height: 80%;
+            object-fit: contain;
+            object-position: bottom right;
+
+            @media (max-width: 1024px) {
+                height: 95%;
+            }
+        }
+    }
+}
