@@ -45,34 +45,3 @@
     }
 }
 
-.cases-item {
-    display: block;
-    border-radius: 8px;
-    background-color: $gray;
-
-    padding: 20px;
-
-    @media (max-width: 768px) {
-        padding: 15px;
-        border-radius: 6px;
-    }
-
-    time {
-        display: block;
-        margin-bottom: 40px;
-        font-size: 14px;
-        line-height: 1;
-
-        @include adaptive-value("margin-bottom", 40, 25, 1);
-    }
-
-    span {
-        display: block;
-        font-size: 18px;
-        line-height: 1.2;
-
-        @media (max-width: 768px) {
-            font-size: 16px;
-        }
-    }
-}

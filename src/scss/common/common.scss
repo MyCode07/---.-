@@ -26,6 +26,22 @@ body {
     }
 }
 
+* {
+    line-height: normal;
+    font-family: Inter !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Inter !important;
+    font-weight: 400 !important;
+    margin-top: 0;
+}
+
 .wrapper {
     min-height: 100%;
     scroll-behavior: smooth;
@@ -71,7 +87,6 @@ section {
 
 h1 {
     color: $white;
-    font-size: 55px;
     @include adaptive-value("font-size", 55, 26, 1);
     font-style: normal;
     font-weight: 300;
@@ -273,6 +288,7 @@ h3 {
     justify-content: center;
     gap: 20px;
 
+    color: $black;
     border: 1px solid rgba($color: $black, $alpha: 0.25);
     padding: 14px;
     border-radius: 4px;
