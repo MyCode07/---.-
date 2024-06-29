@@ -62,7 +62,9 @@
         position: relative;
         aspect-ratio: 16/9;
 
-        iframe {
+        iframe,
+        img,
+        .rll-youtube-player {
             border-radius: 8px;
             position: absolute;
             width: 100%;
