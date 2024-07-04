@@ -1,5 +1,5 @@
 export const stickyHeader = () => {
-    const header = document.querySelector('header');
+    const header = document.querySelector('._landing-body header');
     if (!header) return
 
     const headerheigth = header.getBoundingClientRect().height / 3;

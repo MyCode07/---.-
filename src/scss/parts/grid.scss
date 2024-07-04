@@ -1,4 +1,4 @@
-.grid {
+._landing-wrapper .grid {
     display: grid;
     gap: 20px;
 
@@ -44,4 +44,3 @@
         @include adaptive-value("margin-top", 50, 30, 1);
     }
 }
-

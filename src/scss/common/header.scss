@@ -1,4 +1,4 @@
-.header {
+._landing-body .header {
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -13,7 +13,8 @@
 
     &__container {
         max-width: 1920px;
-        padding: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     // .header__body

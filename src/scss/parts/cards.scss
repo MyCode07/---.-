@@ -1,291 +1,293 @@
-.advantages-item {
-    border-radius: 8px;
-    background-color: $gray;
+._landing-wrapper {
+    .advantages-item {
+        border-radius: 8px;
+        background-color: $gray;
 
-    @include adaptive-value("padding", 30, 15, 1);
+        @include adaptive-value("padding", 30, 15, 1);
 
-    .icon {
-        background-color: $white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .icon {
+            background-color: $white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        margin-bottom: 40px;
+            margin-bottom: 40px;
 
-        @include adaptive-value("width", 100, 60, 1);
-        @include adaptive-value("height", 100, 60, 1);
+            @include adaptive-value("width", 100, 60, 1);
+            @include adaptive-value("height", 100, 60, 1);
 
-        @media (max-width: 768px) {
-            margin-bottom: 30px;
-        }
-
-        img,
-        svg {
-            fill: $blue;
-            object-fit: contain;
-
-            @include adaptive-value("width", 60, 22, 1);
-            @include adaptive-value("height", 45, 22, 1);
-        }
-    }
-
-    span {
-        display: block;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 1.2;
-        letter-spacing: -0.04em;
-
-        @include adaptive-value("font-size", 24, 16, 1);
-        margin-bottom: 20px;
-
-        @media (max-width: 768px) {
-            margin-bottom: 15px;
-        }
-    }
-
-    p {
-        max-width: 340px;
-
-        @include adaptive-value("font-size", 16, 12, 1);
-    }
-}
-
-.cases-item {
-    display: block;
-    border-radius: 8px;
-    background-color: $gray;
-
-    padding: 20px;
-
-    color: $black;
-    transition: all 0.3s ease 0s;
-
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: $blue;
-            color: $white;
-        }
-    }
-
-    @media (max-width: 768px) {
-        padding: 15px;
-        border-radius: 6px;
-    }
-
-    time {
-        display: block;
-        margin-bottom: 40px;
-        font-size: 14px;
-        line-height: 1;
-        opacity: 0.5;
-
-        @include adaptive-value("margin-bottom", 40, 15, 1);
-
-        @media (max-width: 768px) {
-            font-size: 12px;
-        }
-    }
-
-    span {
-        display: block;
-        font-size: 18px;
-        line-height: 1.2;
-
-        @media (max-width: 768px) {
-            font-size: 14px;
-        }
-    }
-}
-
-.video-item {
-    background-color: $gray;
-    border-radius: 8px;
-
-    // .video-item__iframe
-
-    &__iframe {
-        position: relative;
-        aspect-ratio: 16/9;
-
-        iframe,
-        img,
-        .rll-youtube-player {
-            border-radius: 8px;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    span {
-        padding: 20px;
-        font-size: 18px;
-        display: block;
-
-        @media (max-width: 768px) {
-            font-size: 14px;
-            padding: 15px;
-        }
-    }
-}
-
-.review-item {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    padding: 20px;
-    border-radius: 8px;
-    background-color: $gray;
-
-    @media (max-width: 768px) {
-        padding: 15px;
-        border-radius: 6px;
-    }
-
-    // .review-item__rating
-
-    &__rating {
-        width: 68px;
-        margin-bottom: 20px;
-
-        @media (max-width: 768px) {
-            margin-bottom: 15px;
-        }
-    }
-
-    .text-box {
-        flex: 1 1 auto;
-    }
-
-    // .review-item__data
-
-    &__data {
-        border-top: 1px solid rgba($color: $black, $alpha: 0.25);
-
-        display: flex;
-        align-items: center;
-
-        @include adaptive-value("margin-top", 60, 30, 1);
-        @include adaptive-value("padding-top", 20, 10, 1);
-
-        span {
-            display: block;
-            flex: 0 0 auto;
-
-            &:first-child {
-                margin-right: -15px;
-
-                @media (max-width: 768px) {
-                    margin-right: -10px;
-                }
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
             }
 
             img,
             svg {
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
+                fill: $blue;
+                object-fit: contain;
 
-                @media (max-width: 768px) {
-                    width: 40px;
-                    height: 40px;
-                }
+                @include adaptive-value("width", 60, 22, 1);
+                @include adaptive-value("height", 45, 22, 1);
             }
         }
 
-        div {
-            margin-left: 15px;
-            font-size: 16px;
-            line-height: 1.4;
+        span {
+            display: block;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.04em;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 5px;
+            @include adaptive-value("font-size", 24, 16, 1);
+            margin-bottom: 20px;
 
             @media (max-width: 768px) {
-                margin-left: 10px;
-                font-size: 12px;
-            }
-
-            label {
-                display: block;
-            }
-
-            time {
-                display: block;
-                color: rgba($color: $black, $alpha: 0.5);
+                margin-bottom: 15px;
             }
         }
+
+        p {
+            max-width: 340px;
+
+            @include adaptive-value("font-size", 16, 12, 1);
+        }
     }
-}
 
-.reviews-links {
-    @include adaptive-value("margin-top", 50, 30, 1);
+    .cases-item {
+        display: block;
+        border-radius: 8px;
+        background-color: $gray;
 
-    @media (min-width: 769px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+        padding: 20px;
 
-[data-accordion] {
-    [data-accordion-item] {
-        padding: 20px 0;
-        border-bottom: 1px solid rgba($color: $black, $alpha: 0.25);
+        color: $black;
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        }
 
         @media (max-width: 768px) {
-            padding: 15px 0;
+            padding: 15px;
+            border-radius: 6px;
         }
 
-        &[data-open] {
-            [data-accordion-item-content] {
+        time {
+            display: block;
+            margin-bottom: 40px;
+            font-size: 14px;
+            line-height: 1;
+            opacity: 0.5;
+
+            @include adaptive-value("margin-bottom", 40, 15, 1);
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+            line-height: 1.2;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .video-item {
+        background-color: $gray;
+        border-radius: 8px;
+
+        // .video-item__iframe
+
+        &__iframe {
+            position: relative;
+            aspect-ratio: 16/9;
+
+            iframe,
+            img,
+            .rll-youtube-player {
+                border-radius: 8px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        span {
+            padding: 20px;
+            font-size: 18px;
+            display: block;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+                padding: 15px;
+            }
+        }
+    }
+
+    .review-item {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        padding: 20px;
+        border-radius: 8px;
+        background-color: $gray;
+
+        @media (max-width: 768px) {
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        // .review-item__rating
+
+        &__rating {
+            width: 68px;
+            margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .text-box {
+            flex: 1 1 auto;
+        }
+
+        // .review-item__data
+
+        &__data {
+            border-top: 1px solid rgba($color: $black, $alpha: 0.25);
+
+            display: flex;
+            align-items: center;
+
+            @include adaptive-value("margin-top", 60, 30, 1);
+            @include adaptive-value("padding-top", 20, 10, 1);
+
+            span {
+                display: block;
+                flex: 0 0 auto;
+
+                &:first-child {
+                    margin-right: -15px;
+
+                    @media (max-width: 768px) {
+                        margin-right: -10px;
+                    }
+                }
+
+                img,
+                svg {
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+
+                    @media (max-width: 768px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
             }
 
-            [data-accordion-item-title] {
-                color: $blue;
+            div {
+                margin-left: 15px;
+                font-size: 16px;
+                line-height: 1.4;
 
-                svg {
-                    transform: rotate(45deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+
+                @media (max-width: 768px) {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+
+                label {
+                    display: block;
+                }
+
+                time {
+                    display: block;
+                    color: rgba($color: $black, $alpha: 0.5);
                 }
             }
         }
     }
 
-    [data-accordion-item-title] {
-        @include adaptive-value("font-size", 24, 18, 1);
+    .reviews-links {
+        @include adaptive-value("margin-top", 50, 30, 1);
 
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: -0.01em;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-
-        transition: all 0.3s ease 0s;
-
-        svg {
-            flex: 0 0 auto;
-            width: 16px;
-            height: 16px;
-            fill: $blue;
-
-            transition: all 0.3s ease 0s;
+        @media (min-width: 769px) {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
-    [data-accordion-item-content] {
-    }
+    [data-accordion] {
+        [data-accordion-item] {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba($color: $black, $alpha: 0.25);
 
-    [data-accordion-item-height] {
-        div {
-            padding: 40px 0;
-            max-width: 90%;
+            @media (max-width: 768px) {
+                padding: 15px 0;
+            }
+
+            &[data-open] {
+                [data-accordion-item-content] {
+                }
+
+                [data-accordion-item-title] {
+                    color: $blue;
+
+                    svg {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        [data-accordion-item-title] {
+            @include adaptive-value("font-size", 24, 18, 1);
+
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            transition: all 0.3s ease 0s;
+
+            svg {
+                flex: 0 0 auto;
+                width: 16px;
+                height: 16px;
+                fill: $blue;
+
+                transition: all 0.3s ease 0s;
+            }
+        }
+
+        [data-accordion-item-content] {
+        }
+
+        [data-accordion-item-height] {
+            div {
+                padding: 40px 0;
+                max-width: 90%;
+            }
         }
     }
 }

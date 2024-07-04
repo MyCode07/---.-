@@ -1,8 +1,8 @@
 import { lockPadding, unLockPadding } from '../utils/lockPadding.js';
 
-const burger = document.querySelector('.header__burger');
-const menu = document.querySelector('.header__menu');
-const hero = document.querySelector('.hero');
+const burger = document.querySelector('._landing-body .header__burger');
+const menu = document.querySelector('._landing-body .header__menu');
+const hero = document.querySelector('._landing-body .hero');
 
 if (burger) {
     burger.addEventListener('click', (e) => {
@@ -22,7 +22,7 @@ if (burger) {
     })
 }
 
-const menuLinks = document.querySelectorAll('.header__menu nav a');
+const menuLinks = document.querySelectorAll('._landing-body .header__menu nav a');
 if (menuLinks) {
     menuLinks.forEach(link => {
         link.addEventListener('click', (e) => {

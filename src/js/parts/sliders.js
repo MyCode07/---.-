@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Autoplay } from 'swiper/modules';
 
-const sliders = document.querySelectorAll('.swiper');
+const sliders = document.querySelectorAll('._landing-wrapper .swiper');
 if (sliders.length) {
     sliders.forEach(slider => {
         const section = slider.closest('section');

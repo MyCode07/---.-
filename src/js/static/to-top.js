@@ -1,5 +1,5 @@
 function scrollToTop() {
-    const toTopBtn = document.querySelector('.to-top');
+    const toTopBtn = document.querySelector('._landing-body .to-top');
 
     if (!toTopBtn) return
 
